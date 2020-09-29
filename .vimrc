@@ -122,5 +122,17 @@ if has("gui_macvim")
   noremap <D-0> :tablast<CR>
 endif
 
+"навигация по вкладкам
+nnoremap <C-Left> :tabprevious<CR>                                                                            
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-j> :tabprevious<CR>                                                                            
+nnoremap <C-k> :tabnext<CR>
+
+"включаем нумерацию строк
+set number 
+
 set guifont=Monaco:h18
 colorscheme murphy
+
+
+
