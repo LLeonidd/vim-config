@@ -31,6 +31,13 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
 
 
+
+"Плагин дерево каталогов
+Plugin 'scrooloose/nerdtree'
+
+"OceanicNext colorScheme
+Plugin 'mhartington/oceanic-next'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -98,6 +105,9 @@ set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
+"Настройка плагина дерева каталогов
+nnoremap <C-N> :NERDTreeToggle<CR>
+
 " Выключаем звук в Vim
 set visualbell t_vb=
 
@@ -122,17 +132,18 @@ if has("gui_macvim")
   noremap <D-0> :tablast<CR>
 endif
 
+set guifont=Monaco:h18
+
+
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+
+"Установка нумерации строк
+set number
+
 "навигация по вкладкам
 nnoremap <C-Left> :tabprevious<CR>                                                                            
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-j> :tabprevious<CR>                                                                            
 nnoremap <C-k> :tabnext<CR>
-
-"включаем нумерацию строк
-set number 
-
-set guifont=Monaco:h18
-colorscheme murphy
-
-
-
